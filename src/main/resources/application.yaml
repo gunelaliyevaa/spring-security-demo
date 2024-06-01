@@ -1,0 +1,44 @@
+logging:
+  level:
+    org.springframework.security: trace
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jwt_security
+    username: postgres
+    password: mysecretpassword
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    host: live.smtp.mailtrap.io
+    port: 587
+    username: api
+    password: c0f71c20a8e8920e5373a6e22f6e932c
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:  # transport layer security
+            enable: true
+
+
+application:
+  security:
+   jwt:
+    secret-key: 4xBJ9w5cTn7CxHJnJM9vJ1Sjz3B2mlLCG6vLghwFJxQ=
+    expiration: 86400000 # 1 day
+    refresh-token:
+     expiration: 604800000 # 7 days
+
+
+
+
+
+
