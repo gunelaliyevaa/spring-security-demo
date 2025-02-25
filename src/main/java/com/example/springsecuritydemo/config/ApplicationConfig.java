@@ -44,10 +44,10 @@ public class ApplicationConfig {
 
 
     /***
-       AuthenticationManager is a core interface responsible for authenticating a user.
-       It receives an Authentication request, typically containing a UsernamePasswordAuthenticationToken or other authentication tokens,
-       and then it tries to authenticate the user based on the provided credentials when a user tries to log in or access a secured resource.
-    ***/
+     AuthenticationManager is a core interface responsible for authenticating a user.
+     It receives an Authentication request, typically containing a UsernamePasswordAuthenticationToken or other authentication tokens,
+     and then it tries to authenticate the user based on the provided credentials when a user tries to log in or access a secured resource.
+     ***/
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
         return configuration.getAuthenticationManager();
